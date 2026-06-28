@@ -11,7 +11,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
     body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
-    .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+    .animate-fade-in { animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
@@ -19,8 +19,8 @@
 <body class="min-h-screen flex flex-col items-center p-4 sm:p-10 animate-fade-in selection:bg-[#001e50] selection:text-white">
 
   <header class="w-full max-w-6xl text-center mb-12 bg-white p-10 rounded-[2rem] shadow-sm border border-slate-200">
-    <div class="inline-flex items-center justify-center w-16 h-16 bg-[#001e50] rounded-2xl mb-6 shadow-lg shadow-blue-900/20">
-      <i class="ph-bold ph-git-branch text-3xl text-white"></i>
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl mb-4 shadow-md border border-slate-100 p-2">
+      <img src="https://cdn.worldvectorlogo.com/logos/volkswagen-logo-2019.svg" class="w-full h-full object-contain" alt="Volkswagen Logo">
     </div>
     <h1 class="text-3xl sm:text-4xl font-black text-[#001e50] tracking-tight mb-2">Flujo de Trabajo</h1>
     <p class="text-slate-500 font-medium text-lg">Guía paso a paso para el procesamiento de vehículos en Taller y Recambios.</p>
@@ -36,8 +36,8 @@
             </div>
             <p class="text-slate-500 text-sm mb-4">Cuando Entregas asigna un coche, este aparecerá automáticamente en el <strong>Panel de Entrada (Inbox)</strong>.</p>
         </div>
-        <div class="bg-slate-50 mt-auto p-4 border-t border-slate-100 h-48 flex items-center justify-center">
-            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/1.png" alt="Recepción" class="w-full h-full object-cover rounded-xl shadow-sm border border-slate-200" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+1.png'">
+        <div class="w-full aspect-video bg-slate-50 border-t border-slate-100 p-4 flex items-center justify-center mt-auto">
+            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/1.png" alt="Recepción" class="max-w-full max-h-full object-contain rounded-md shadow-sm border border-slate-200 cursor-zoom-in hover:scale-[1.03] transition-all duration-200" onclick="abrirModal(this.src)" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+1.png'">
         </div>
     </div>
 
@@ -49,8 +49,8 @@
             </div>
             <p class="text-slate-500 text-sm mb-4">Abre la ficha del vehículo. Deberás revisar y completar los campos obligatorios habilitados para Taller, como el número de Orden de Reparación (OR) y la <strong>fecha aproximada de finalización</strong>. Esto es vital para que Entregas pueda agendar la recogida con el cliente final con antelación. Acuérdate de darle a guardar para que el resto de departamentos puedan ver los cambios.</p>
         </div>
-        <div class="bg-slate-50 mt-auto p-4 border-t border-slate-100 h-48 flex items-center justify-center">
-            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/2.png" alt="Campos" class="w-full h-full object-cover rounded-xl shadow-sm border border-slate-200" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+2.png'">
+        <div class="w-full aspect-video bg-slate-50 border-t border-slate-100 p-4 flex items-center justify-center mt-auto">
+            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/2.png" alt="Campos" class="max-w-full max-h-full object-contain rounded-md shadow-sm border border-slate-200 cursor-zoom-in hover:scale-[1.03] transition-all duration-200" onclick="abrirModal(this.src)" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+2.png'">
         </div>
     </div>
 
@@ -62,8 +62,8 @@
             </div>
             <p class="text-slate-500 text-sm mb-4">Para incidencias rápidas o notas internas, utiliza el <strong>Botón de Mensajes</strong> situado en la tarjeta del vehículo. La comunicación se enlazará al historial de esa matrícula específica y podrás comunicarte con los otros departamentos.</p>
         </div>
-        <div class="bg-slate-50 mt-auto p-4 border-t border-slate-100 h-48 flex items-center justify-center">
-            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/3.png" alt="Mensajes" class="w-full h-full object-cover rounded-xl shadow-sm border border-slate-200" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+3.png'">
+        <div class="w-full aspect-video bg-slate-50 border-t border-slate-100 p-4 flex items-center justify-center mt-auto">
+            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/3.png" alt="Mensajes" class="max-w-full max-h-full object-contain rounded-md shadow-sm border border-slate-200 cursor-zoom-in hover:scale-[1.03] transition-all duration-200" onclick="abrirModal(this.src)" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+3.png'">
         </div>
     </div>
 
@@ -75,8 +75,8 @@
             </div>
             <p class="text-slate-500 text-sm mb-4">Si la unidad requiere accesorios, pulsa el botón de <strong>"Enviar a Recambios"</strong>. El estado cambiará y el departamento de recambios recibirá una alerta en su panel para suministrar el material.</p>
         </div>
-        <div class="bg-slate-50 mt-auto p-4 border-t border-slate-100 h-48 flex items-center justify-center">
-            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/4.png" alt="Recambios" class="w-full h-full object-cover rounded-xl shadow-sm border border-slate-200" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+4.png'">
+        <div class="w-full aspect-video bg-slate-50 border-t border-slate-100 p-4 flex items-center justify-center mt-auto">
+            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/4.png" alt="Recambios" class="max-w-full max-h-full object-contain rounded-md shadow-sm border border-slate-200 cursor-zoom-in hover:scale-[1.03] transition-all duration-200" onclick="abrirModal(this.src)" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+4.png'">
         </div>
     </div>
 
@@ -86,15 +86,15 @@
                 <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#25D366] text-white font-black text-sm">5</span>
                 <h3 class="text-lg font-black text-[#001e50] uppercase tracking-tight">Finalizar Trabajo</h3>
             </div>
-            <p class="text-slate-500 text-sm mb-4">Una vez completada la pre-entrega mecánica y estética, pulsa el botón verde de <strong>"Finalizar Trabajo"</strong>. El vehículo desaparecerá de tus tareas pendientes y pasará a inventario.</p>
+            <p class="text-slate-500 text-sm mb-4">Una vez completada la pre-entrega mecánica y estética, pulsa el botón verde de <strong>"Finalizar Trabajo"</strong>. El vehículo desaparecido de tus tareas pendientes y pasará a inventario.</p>
         </div>
-        <div class="bg-slate-50 mt-auto p-4 border-t border-slate-100 h-48 flex items-center justify-center">
-            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/5.png" alt="Finalizar" class="w-full h-full object-cover rounded-xl shadow-sm border border-slate-200" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+5.png'">
+        <div class="w-full aspect-video bg-slate-50 border-t border-slate-100 p-4 flex items-center justify-center mt-auto">
+            <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/5.png" alt="Finalizar" class="max-w-full max-h-full object-contain rounded-md shadow-sm border border-slate-200 cursor-zoom-in hover:scale-[1.03] transition-all duration-200" onclick="abrirModal(this.src)" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Falta+Imagen+5.png'">
         </div>
     </div>
 
     <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg shadow-slate-200/50 border border-slate-100 flex flex-col lg:col-span-3">
-        <div class="p-6 md:flex md:items-center md:gap-8">
+        <div class="p-6 md:flex md:items-center md:gap-8 h-full">
             <div class="md:w-1/3 mb-6 md:mb-0">
                 <div class="flex items-center gap-3 mb-4">
                     <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-700 text-white font-black text-sm">6</span>
@@ -102,13 +102,37 @@
                 </div>
                 <p class="text-slate-500 text-sm">Cualquier cambio de estado, mensaje enviado o actualización de fecha queda registrado permanentemente en el <strong>Historial</strong>. Puedes consultarlo en cualquier momento para ver la trazabilidad de quién y cuándo interactuó con cada matrícula.</p>
             </div>
-            <div class="md:w-2/3 bg-slate-50 p-4 rounded-xl border border-slate-100 h-64 flex items-center justify-center">
-                <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/6.png" alt="Historial" class="w-full h-full object-cover rounded-xl shadow-sm border border-slate-200" onerror="this.src='https://placehold.co/800x300/e2e8f0/475569?text=Falta+Imagen+6.png'">
+            <div class="md:w-2/3 w-full bg-slate-50 rounded-xl border border-slate-100 p-4 flex items-center justify-center min-h-[250px]">
+                <img src="https://raw.githubusercontent.com/vwmadrid/Manual/main/images/6.png" alt="Historial" class="max-w-full max-h-full object-contain rounded-md shadow-sm border border-slate-200 cursor-zoom-in hover:scale-[1.03] transition-all duration-200" onclick="abrirModal(this.src)" onerror="this.src='https://placehold.co/800x300/e2e8f0/475569?text=Falta+Imagen+6.png'">
             </div>
         </div>
     </div>
 
   </div>
+
+  <div id="image-modal" class="fixed inset-0 bg-slate-900/95 z-50 hidden items-center justify-center p-4 cursor-zoom-out" onclick="cerrarModal()">
+      <div class="relative max-w-5xl max-h-[90vh] flex items-center justify-center anonymity-fade-in">
+          <img id="modal-img" src="" class="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl border border-white/10">
+          <span class="absolute -top-12 right-0 md:top-4 md:-right-12 bg-white/10 text-white hover:bg-white/20 transition w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold cursor-pointer">&times;</span>
+      </div>
+  </div>
+
+  <script>
+    window.abrirModal = function(src) {
+        if (src.includes('placehold.co')) return;
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        modalImg.src = src;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    };
+
+    window.cerrarModal = function() {
+        const modal = document.getElementById('image-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    };
+  </script>
 
 </body>
 </html>
